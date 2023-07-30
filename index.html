@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Print It</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+  <!-- header ============================== -->
+
+  <header>
+
+    <nav>
+        <div class="logo-img"><img src="./images/logo.png" alt="#"></div>
+        <div><a href="#"><button>Estimate</button></a></div>
+    </nav>
+
+    <!-- hero section =============== -->
+
+    <section class="hero-sect">
+      <!-- slider ==== -->
+
+      <!-- slider 1 -->
+          <div class="slider">
+              <div class="numbertext">1 / 4</div>
+              <img src="./images/slideshow/slide1.jpg" alt="#">
+              <div class="text-div">
+                  <h1>Prints in all formats </h1>
+                  <p>in store and online</p>
+              </div>
+          </div>
+          <!-- slider 2 -->
+          <div class="slider">
+              <div class="numbertext">2 / 4</div>
+              <img src="./images/slideshow/slide2.jpg" alt="#">
+              <div class="text-div">
+                <!-- <h1>Prints in all formats </h1>
+                <p>in store and online</p> -->
+              </div>
+          </div>
+          <!-- slider 3 -->
+          <div class="slider">
+            <div class="numbertext">3 / 4</div>
+            <img src="./images/slideshow/slide3.jpg" alt="#">
+            <div class="text-div">
+                <!-- <h1>Prints in all formats </h1>
+                <p>in store and online</p> -->
+            </div>
+          </div>
+          <!-- slider 4 -->
+          <div class="slider">
+            <div class="numbertext">4 / 4</div>
+            <img src="./images/slideshow/slide4.png" alt="#">
+            <div class="text-div">
+                <!-- <h1>Prints in all formats </h1>
+                <p>in store and online</p> -->
+            </div>
+          </div>
+      
+          <!-- the arrow icons and text -->
+        <div class="icons">
+          <div class="icon-div" onclick="plusSlides(-1)">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+          <div class="icon-div" onclick="plusSlides(1)">
+             <i class="fas fa-chevron-right"></i>
+          </div>
+        </div>
+
+    </section>
+       <!-- The dots/circles -->
+       <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+  </header>
+
+  <!-- About us ============================  -->
+
+  <section id="about-us">
+   <!-- text section ==== -->
+   <div class="text-div">
+      <h1>Who are we?</h1>
+      <div class="contents"><img src="./images/tricolor-icon.png"><p>For nearly 60 years we have been family printer specializing in the needs of small and large businesses. Established in Rennes in the Brequigny destrict, we support our customers in their printing projects.</p></div>
+      <div class="contents"><img src="./images/tricolor-icon.png"><p>From the creation of your files to the delivery of your printed matter, we put all our know-how at your disposal in order to best meet your expectations.</p></div>
+   </div>
+   <!--the image section ===  -->
+   <div class="image-div"><img src="./images/colors.jpg"></div>
+
+  </section>
+
+  <!-- our products ============================= -->
+
+  <section id="our-products">
+    <!-- image section ===== -->
+    <div class="image-div"><img src="./images/yellow-book.jpg"></div>
+    <!-- text section ====== -->
+    <div class="text-div">
+      <h1>Our Products</h1>
+      <p>Thanks to our many years of experience in the printing of event products and communication media, we are constantly innovating and perfecting our services in order to best satify our customers. You can browse the different sections of the site to discover our wide range of papers and finishes, for products as diverse as leaflets or promotional brochures, brochures, flyers, corperate goodies, stickers of all sizes...</p>
+    </div>
+  </section>
+
+  <!-- suggestion secion ======================================= -->
+
+  <section id="suggestion">
+    <div class="contents">
+      <h1>A Question? A Quote?</h1>
+    <p>Call us on <a href="#">02 12 34 56 78</a> or request a quote here:</p>
+    <a href="#"><button>Estimate</button></a>
+    </div>
+  </section>
+
+  <!-- why call us? ================================= -->
+
+  <section id="consult-us">
+      <div class="headin1"><h1>Why Consult Us?</h1></div>
+      <!-- the blocks ===== -->
+      <div class="blocks">
+        <!-- block 1 -->
+          <div class="block-1">
+              <div class="icons-only"><img src="./images/proximity-icon.png" alt="#"></div>
+              <div><h1>Proximity</h1></div>
+              <div class="paragraph-div"><p>Easy to access, a competent and attentive team awaits you for all your printing and visual communication needs.</p></div>
+          </div>
+        <!-- block 2 -->
+          <div class="block-2">
+              <div class="icons-only"><img src="./images/quality-icon.png" alt="#"></div>
+              <div><h1>Quality</h1></div>
+              <div class="paragraph-div"><p>Whether it's simple copies, brochures, business cards or design, we always guatantee you the best results.</p></div>
+          </div>
+        <!-- block 3 -->
+          <div class="block-3">
+              <div class="icons-only"><img src="./images/speedy-icon.png" alt="#"></div>
+              <div><h1>Speed</h1></div>
+              <div class="paragraph-div"><p>You can count on us to respond to your request in time and in hour.</p></div>
+          </div>
+      </div>
+  </section>
+
+  <!-- contact us - =============================  -->
+  
+  <section id="contact-us">
+    <!-- block1 === -->
+    <div class="block1">
+        <!-- contact heading -->
+        <div><h1>Contact</h1></div>
+        <!-- telephone contact -->
+        <div class="phone-contact">
+            <div><img src="./images/tricolor-icon.png" alt="#"></div>
+            <div><h1>By Telephone</h1></div>
+            <div><p>Call us on <a href="#">02 12 34 56 78</a><br> Mon-Fri: 9:30 a.m-6:30 p.m.<br> 
+            Sat: 10am-1pm and 2pm-6:30pm</p></div>
+        </div>
+        <!-- email contact -->
+        <div class="email-contact">
+            <div><img src="./images/tricolor-icon.png" alt="#"></div>
+            <div><h1>By Email</h1></div>
+            <div><a href="#"><button>Write Us</button></a></div>
+        </div>
+        <!-- location  -->
+        <div class="location-address">
+            <div><img src="./images/tricolor-icon.png" alt="#"></div>
+            <div><h1>Go to store</h1></div>
+            <div><p>5 rue Yves Noel, 35200 Rennes<br> <img src="./images/metro.png" alt="#"> metro Clémenceau</p></div>
+        </div>
+    </div>
+    <!-- block2 === -->
+    <div class="block2">
+      <img src="./images/magnifying-glass.jpg" alt="#">
+    </div>
+  </section>
+
+  <!-- footer section ============================== -->
+
+  <footer>
+    <!-- contacts  -->
+      <div>
+         <h4>Contact</h4>
+         <p>Call Us at <a href="#">02 12 34 56 78</a></p>
+         <p>Lun-Ven : 9h30-18h30</p>
+         <p>10h-13h et 14h-18h30</p>
+      </div>
+      <div>
+        <p>5, rue Yves Noël,35200 Rennes<br>
+          <img src="./images/metro.png" alt="#"> metro Clémenceau</p>
+      </div>
+      <!-- buttons  -->
+      <div class="buttons">
+          <a href="#"><button class="btn1">Write Us</button></a>
+          <a href="#"><button class="btn2">Estimate</button></a>
+      </div>
+      <!-- logo  -->
+      <div class="logo-div"><img src="./images/logo.png" alt="#"></div>
+  </footer>
+
+  <script src="./index.js"></script>
+
+</body>
+</html>

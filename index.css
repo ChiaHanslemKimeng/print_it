@@ -1,0 +1,635 @@
+
+@keyframes fade {
+  from {opacity: .6}
+  to {opacity: 1.7}
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto Slab", sans-serif;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  text-decoration: none;
+}
+
+:root{
+   --nav-bg: white;
+   --nav-button-bg: #CD006B;
+   --slider-text-color: white;
+   --suggestion-bg: #EEE325;
+   --contact-page-bg: #E6F4FB;
+   --email-button-bg: #3396C0;
+   --footer-bg: rgb(40, 54, 61);
+   --footer-first-btn-bg: #3396C0;
+   --footer-second-btn-bg: #CD006B;
+   --footer-logo-bg: white;
+}
+
+button:hover,
+i:hover{
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  border-radius: 5px;
+}
+
+/* header ========================= */
+
+header{
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; */
+  width: 100%;
+}
+
+/* nav ============================ */
+
+nav{
+  background-color: var(--nav-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10000;
+}
+
+nav .logo-img{
+  width: 260px;
+}
+
+nav img{
+  height: 70px;
+  width: 100%;
+  object-fit: cover;
+}
+
+nav button{
+  background-color: var(--nav-button-bg);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  /* font-weight: bold; */
+}
+
+nav button:hover{
+  cursor: pointer;
+}
+
+/* hero section ====================== */
+
+.hero-sect{
+  display: flex;
+  width: 100%;
+  height: 470px;
+  margin-bottom: 2rem;
+}
+
+.hero-sect .slider{
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: 1.4s ease;
+}
+
+.hero-sect .slider img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-sect .icons{
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  padding: 0 1rem 0 1rem;
+  top: 50%;
+}
+
+.hero-sect .icons .icon-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 5px;
+  height: 50px;
+  width: 40px;
+}
+
+.hero-sect .icons .icon-div:hover{
+  cursor: pointer;
+  background-color: rgb(47, 34, 34);
+  transition: 2s;
+}
+
+/* Number text (1/4) */
+.numbertext {
+  color: red;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  font-weight: bold;
+  top: 26%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+.hero-sect .icons i{
+  color: white;
+  font-size: 24px;
+  transition: 0.6s ease;
+  font-weight: bold;
+  user-select: none;
+}
+
+.hero-sect .slider .text-div{
+  position: absolute;
+  top: 50%;
+  left: 28%;
+  display: block;
+  line-height: 66px;
+  color: var(--slider-text-color);
+  text-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
+}
+
+.hero-sect .slider .text-div h1{
+  font-weight: 900;
+  font-size: 50px;
+  /* text-align: center; */
+}
+
+.hero-sect .slider .text-div  p{
+  display: block;
+  font-weight: 400;
+  font-size: 30px;
+  margin-left: 4rem;
+}
+
+/* About us section =================== */
+
+#about-us{
+  display: flex;
+  /* flex-wrap: wrap-reverse; */
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding: 0 2.5rem 2rem 2.5rem;
+  gap: 2rem;
+}
+
+/* text section === */
+#about-us .text-div{
+  width: 40%;
+}
+
+#about-us .text-div .contents{
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+#about-us .text-div .contents img{
+  height: 25px;
+  margin-right: .8rem;
+}
+
+#about-us .text-div h1{
+  font-weight: 900;
+  font-size: 40px;
+  font-family: "Roboto Slab", sans-serif;
+  margin-bottom: 1rem;
+}
+
+#about-us .text-div p{
+  line-height: 26px;
+  width: 65%;
+}
+
+
+/* image section === */
+#about-us .image-div{
+  width: 60%;
+  height: 350px;
+}
+
+#about-us .image-div img{
+  width: 100%;
+  height: 100%;
+}
+
+/* our products ================================= */
+
+#our-products{
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  margin-top: 4rem;
+  padding: 0 2.5rem 2rem 2.5rem;
+  gap: 2rem;
+}
+
+/* image section === */
+#our-products .image-div{
+  width: 55%;
+  height: 350px;
+}
+
+#our-products .image-div img{
+  height: 100%;
+  width: 100%;
+}
+
+/* text section === */
+#our-products .text-div{
+  width: 35%;
+}
+
+#our-products .text-div h1{
+  font-weight: 900;
+  font-size: 40px;
+  font-family: "Roboto Slab", sans-serif;
+  margin-bottom: 1rem;
+}
+
+#our-products .text-div p{
+  line-height: 26px;
+  /* width: 65%; */
+}
+
+/* suggestions ============================== */
+
+#suggestion{
+  /* display: flex; */
+  margin-top: 3rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70vh;
+}
+
+#suggestion .contents{
+  margin-top: 9rem;
+  background-color: var(--suggestion-bg);
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#suggestion .contents h1{
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+#suggestion .contents p{
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+#suggestion .contents button{
+  background-color: var(--nav-button-bg);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* consult us ============================== */
+
+#consult-us{
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin-top: 3rem;
+  gap: 2rem;
+}
+
+/* consult us heading */
+#consult-us .headin1{
+  flex: 1;
+  display: flex;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+/* blocks--- */
+#consult-us .blocks{
+  display: flex;
+  padding: 0 3rem 1rem 3rem;
+  gap: 2rem;
+}
+
+#consult-us .blocks .block-1,
+#consult-us .blocks .block-2,
+#consult-us .blocks .block-3{
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#consult-us .blocks .block-3 h1{
+  margin-top: 1.6rem;
+}
+
+#consult-us .blocks .icons-only{
+ display: flex;
+ /* flex-wrap: wrap; */
+ justify-content: center;
+ align-items: center;
+}
+
+#consult-us .blocks h1{
+  font-size: 22px;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#consult-us .blocks .paragraph-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#consult-us .blocks p{
+  /* width: 70%; */
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 26px;
+  /* transform: matrix(-50,-50); */
+}
+
+/* contact us ========================= */
+
+#contact-us{
+  display: flex;
+  padding: 6rem;
+  background-color: var(--contact-page-bg);
+  justify-content: space-between;
+  gap: .7rem;
+}
+
+#contact-us .block1,
+#contact-us .block2{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#contact-us .block1 .phone-contact,
+#contact-us .block1 .email-contact,
+#contact-us .block1 .location-address{
+   display: flex;
+   gap: .4rem;
+   /* justify-content: space-around; */
+}
+
+#contact-us .block1 .email-contact button{
+  background-color: var(--email-button-bg);
+  padding: 16px 32px;
+  border-radius: 5px;
+  border: none;
+  margin-left: 1rem;
+  color: white;
+}
+
+#contact-us .block1 .location-address div:last-child{
+  margin-left: .6rem;
+}
+
+/* footer ==================================== */
+
+footer{
+  color: white;
+  display: flex;
+  padding: 3rem;
+  gap: 2rem;
+  background-color: var(--footer-bg);
+}
+
+footer a{
+  color: white;
+}
+
+footer .buttons{
+  margin-top: 2rem;
+}
+
+footer .buttons .btn1{
+  background-color: var(--footer-first-btn-bg);
+  padding: 16px 32px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+}
+
+footer .buttons .btn2{
+  background-color: var(--footer-second-btn-bg);
+  padding: 16px 32px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+}
+
+footer .logo-div{
+  background-color: var(--footer-logo-bg);
+  width: 300px;
+  height: 100px;
+  margin-top: 1rem;
+}
+
+footer .logo-div img{
+  width: 100%;
+}
+
+footer h4{
+  margin-bottom: 1rem;
+}
+
+footer p{
+  line-height: 20px;
+}
+
+footer div:nth-child(2){
+  margin-top: 2rem;
+}
+
+/* mobile version ============================================ */
+
+@media (max-width: 700px){
+  nav{
+    padding: 0 1.5rem 0 1.5rem;
+  }
+
+  nav .logo-img{
+    width: 160px;
+  }
+
+  nav img{
+    width: 100%;
+    height: 100%;
+  }
+
+  /* hero section ================== */
+
+  .hero-sect{
+    height: 450px;
+  }
+
+  .hero-sect .slider .text-div h1 {
+    font-size: 28px;
+  }
+
+  .hero-sect .slider .text-div p{
+    margin-left: 0;
+    font-size: 23px;
+  }
+
+  .hero-sect .slider .text-div{
+    line-height: 41px;
+  }
+
+  .hero-sect .slider .text-div{
+    left: 20%;
+  }
+
+  .hero-sect .icons{
+    width: 100%;
+    top: 30%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* about us */
+  #about-us{
+    flex-direction: column;
+  }
+
+  #about-us .text-div{
+    width: 100%;
+  }
+
+  #about-us .image-div{
+    width: 100%;
+  }
+
+  /* our products  */
+  #our-products{
+    flex-direction: column-reverse;
+    margin-top: 2rem;
+  }
+
+  #our-products .image-div,
+  #our-products .text-div{
+    width: 100%;
+  }
+
+  /* suggestion section  */
+  #suggestion .contents h1{
+    font-size: 30px;
+  }
+
+  #suggestion .contents p{
+    font-size: 13px;
+  }
+
+  /* why call us */
+  #consult-us{
+    margin-top: 0;
+  }
+  #consult-us .headin1{
+    font-size: 23px;
+  }
+
+  #consult-us .blocks{
+    flex-direction: column;
+  }
+
+  /* contact us */
+  #contact-us{
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  #contact-us .block1{
+    gap: 1rem;
+  }
+
+  #contact-us .block1 .email-contact button{
+    padding: 12px 28px;
+  }
+
+  /* footer */
+  footer {
+    flex-direction: column;
+  }
+
+  footer .buttons{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer .buttons .btn1,
+  footer .buttons .btn2{
+    padding: 12px 28px;
+  }
+
+  footer .logo-div{
+    width: 100%;
+    height: 140px;
+  }
+}
